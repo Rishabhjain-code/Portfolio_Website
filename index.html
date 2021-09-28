@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Project</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jquery got add -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header id="body-header">
+      <nav id="navbar">
+        <!-- <ul id="nav-list" class="horizontal-list" type="none"> -->
+        <ul id="nav-list" type="none">
+          <li class="nav-list-li"><a href="#">Home</a></li>
+          <li class="nav-list-li"><a href="#about">About</a></li>
+          <li class="nav-list-li"><a href="#skills">Skills</a></li>
+          <li class="nav-list-li"><a href="#education">Education</a></li>
+          <li class="nav-list-li"><a href="#experience">Experience</a></li>
+          <li class="nav-list-li"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-list-li"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- UNCOMMENT THIS AS HERE SEE INLINE CSS THUS ON NAV-LIST-LI A PR :HOVER SHOWS NO EFFECT, SHOWS ONLY WHEN APPLIED SAME STYLE WITHOUT HOVER AS EXTERNAL/INTERNAL CSS NOT AS INLINE CSS
+            
+                <ul id="nav-list" type="none">
+                <li class="nav-list-li"><a href="#" style="text-decoration: none; color: #f6f6b2;">Home</a></li>
+                <li class="nav-list-li"><a href="#about" style="text-decoration: none; color: #f6f6b2;">About</a></li>
+                <li class="nav-list-li"><a href="#skills" style="text-decoration: none; color: #f6f6b2;">Skills</a></li>
+                <li class="nav-list-li"><a href="#experience"
+                        style="text-decoration: none; color: #f6f6b2;">Experience</a></li>
+                <li class="nav-list-li"><a href="#education"
+                        style="text-decoration: none; color: #f6f6b2;">Education</a></li>
+                <li class="nav-list-li"><a href="#portfolio"
+                        style="text-decoration: none; color: #f6f6b2;">Portfolio</a></li>
+                <li class="nav-list-li"><a href="#contact" style="text-decoration: none; color: #f6f6b2;">Contact</a>
+                </li>
+                </ul> 
+            -->
+      </nav>
+
+      <nav id="mobile-navbar">
+        <div class="mbar-hamburger">
+          <a href="#mbar-list">
+            <i class="fas fa-bars" id="mbar-icon"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-times" id="close-icon"></i>
+          </a>
+        </div>
+        <ul id="mbar-list" type="none">
+          <li class="mbar-list-li"><a href="#">Home</a></li>
+          <li class="mbar-list-li"><a href="#about">About</a></li>
+          <li class="mbar-list-li"><a href="#skills">Skills</a></li>
+          <li class="mbar-list-li"><a href="#education">Education</a></li>
+          <li class="mbar-list-li"><a href="#experience">Experience</a></li>
+          <li class="mbar-list-li"><a href="#portfolio">Portfolio</a></li>
+          <li class="mbar-list-li"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav id="go-to-top" class="not-visible">
+        <a href="#">Go To Top</a>
+      </nav>
+
+      <div id="body-header-name">
+        <span id="fixed-part">Rishabh Jain is &nbsp;</span>
+        <span id="sentence" class="sentence"></span>
+        <span class="input-cursor"></span>
+      </div>
+
+      <!-- <div id="social-links">
+            <ul class="social-list" type="none">
+                <li><a href="https://leetcode.com/rishabhjain1008/"><img class="social-image"
+                            src="https://leetcode.com/_next/static/images/logo-ff2b712834cf26bf50a5de58ee27bcef.png"
+                            alt=""></a></li>
+                <li><a href="mailto: 7699rishabhjain@gmail.com"><img class="social-image"
+                            src="static/images/gmail_icon.png" alt=""></a></li>
+                <li><a href="https://www.stackoverflow.com"><img class="social-image"
+                            src="static/images/stackoverflow_icon.png" alt=""></a></li>
+                <li><a href="https://www.github.com"><img class="social-image" src="static/images/github_icon.png"
+                            alt=""></a></li>
+            </ul>
+        </div> -->
+
+      <div id="social-links2">
+        <ul class="horizontal-list social-list2" type="none">
+          <li id="leetcode">
+            <a href="https://www.leetcode.com/rishabhjain1008"
+              ><img
+                class=""
+                src="https://leetcode.com/_next/static/images/logo-ff2b712834cf26bf50a5de58ee27bcef.png"
+                alt=""
+            /></a>
+          </li>
+
+          <li id="stackoverflow">
+            <a href="https://www.stackoverflow.com"
+              ><i class="fab fa-stack-overflow"></i
+            ></a>
+          </li>
+          <li id="gmail">
+            <a href="mailto: 7699rishabhjain@gmail.com"
+              ><i class="fab fa-google"></i
+            ></a>
+          </li>
+          <li id="linkedin">
+            <a href="https://www.linkedin.com"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li id="quora">
+            <a href="https://www.quora.com"><i class="fab fa-quora"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main id="main">
+      <section id="about">
+        <div id="about-img">
+          <img src="static/images/self.png" alt="" />
+        </div>
+        <article id="about-article">
+          Lorem ipsum dolor sit amet consectetur
+          <span class="bold-blue"> adipisicing elit. Est perferendis,</span>
+          maiores minima fuga iusto a fugiat laborum? Numquam nesciunt commodi
+          tempora repellat. Nostrum distinctio, eveniet dolores, earum ullam
+          perferendis saepe in repellat fugiat temporibus atque modi inventore
+          consectetur <span class="bold-blue">voluptatem nisi. </span>Lorem,
+          ipsum dolor sit amet consectetur adipisicing elit. Porro ab impedit ex
+          nostrum non aliquam, excepturi voluptatibus esse, odit maiores earum
+          possimus blanditiis perferendis suscipit, architecto unde sequi?
+          Tempora saepe, error
+          <span class="bold-blue">quis aliquid consequatur </span>corrupti iste
+          quisquam modi ut quia?Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Numquam, architecto! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Est optio, fugiat recusandae
+        </article>
+      </section>
+      <section id="skills">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-chalkboard-teacher"></i>
+          </span>
+          <span>SKILLS</span>
+        </h1>
+        <div class="skills-display">
+          <div class="skill-progress">
+            <div class="skill-value bg-blue seventy-percent">C++</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-red sixty-percent">HTML</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-orange ninety-percent">NodeJS</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-green forty-percent">CSS</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-purple fifty-percent">Javascript</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-lightblue seventy-percent">Java</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-violet ninety-percent">Android</div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-value bg-orange seventy-percent">IOS</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="skills">
+            <h1 class="section-heading mb75px">
+                <span>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </span>
+                <span>SKILLS</span>
+            </h1>
+            <div class="skills-display">
+
+                <div class="skill-progress2">
+                    <div class="seventy-percent bg-blue">
+                        <div class="skill-name">
+                            <span>C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="sixty-percent bg-red">
+                        <div class="skill-name">
+                            <span>HTML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="fifty-percent bg-orange">
+                        <div class="skill-name">
+                            <span>NodeJS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="ninety-percent bg-green">
+                        <div class="skill-name">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="forty-percent bg-purple">
+                        <div class="skill-name">
+                            <span>Javasc</span>ript
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="ninety-percent bg-lightblue">
+                        <div class="skill-name">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="forty-percent bg-violet">
+                        <div class="skill-name">
+                            <span>Androi</span>d
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress2">
+                    <div class="thirty-percent bg-orange">
+                        <div class="skill-name">
+                            <span>IOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+      <section id="portfolio">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="fas fa-bars"></i>
+          </span>
+          <span>Portfolio</span>
+        </h1>
+        <div class="portfolio-display">
+          <div id="project1">
+            <a href="#">
+              <div class="project-text-img">
+                <img
+                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+                  alt="Avatar"
+                  class="project-image"
+                />
+                <div class="overlay">
+                  <div class="text">Click for Viewing Project in Detail</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="project2">
+            <a href="#">
+              <div class="project-text-img">
+                <img
+                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+                  alt="Avatar"
+                  class="project-image"
+                />
+                <div class="overlay">
+                  <div class="text">Click for Viewing Project in Detail</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="project3">
+            <a href="#">
+              <div class="project-text-img">
+                <img
+                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+                  alt="Avatar"
+                  class="project-image"
+                />
+                <div class="overlay">
+                  <div class="text">Click for Viewing Project in Detail</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="project4">
+            <a href="#">
+              <div class="project-text-img">
+                <img
+                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"
+                  alt="Avatar"
+                  class="project-image"
+                />
+                <div class="overlay">
+                  <div class="text">Click for Viewing Project in Detail</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="project5">
+            <a href="#">
+              <div class="project-text-img">
+                <img
+                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"
+                  alt="Avatar"
+                  class="project-image"
+                />
+                <div class="overlay">
+                  <div class="text">Click for Viewing Project in Detail</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="project6">
+            <a href="#">
+              <div class="project-text-img">
+                <img
+                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"
+                  alt="Avatar"
+                  class="project-image"
+                />
+                <div class="overlay">
+                  <div class="text">Click for Viewing Project in Detail</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="education">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="far fa-address-card"></i>
+          </span>
+          <span>Education</span>
+        </h1>
+
+        <div class="timeline">
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="education-details">
+                <div class="degree-name">Degree</div>
+                <div class="college-name">Abc Pvt Ltd</div>
+                <div class=".education-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="education-details">
+                <div class="degree-name">Degree</div>
+                <div class="college-name">Abc Pvt Ltd</div>
+                <div class=".education-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="education-details">
+                <div class="degree-name">Degree</div>
+                <div class="college-name">Abc Pvt Ltd</div>
+                <div class=".education-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="education-details">
+                <div class="degree-name">Degree</div>
+                <div class="college-name">Abc Pvt Ltd</div>
+                <div class=".education-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-divider">
+            <div class="timeline-travel-icon">
+              <i class="fas fa-plane"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <h1 class="section-heading mb75px">
+          <span>
+            <i class="far fa-address-card"></i>
+          </span>
+          <span>Experience</span>
+        </h1>
+
+        <div class="timeline">
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="work-details">
+                <div class="designation">Designation</div>
+                <div class="company-name">Abc Pvt Ltd</div>
+                <div class="work-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="work-details">
+                <div class="designation">Designation</div>
+                <div class="company-name">Abc Pvt Ltd</div>
+                <div class="work-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="work-details">
+                <div class="designation">Designation</div>
+                <div class="company-name">Abc Pvt Ltd</div>
+                <div class="work-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-box">
+            <div class="work-icon-details">
+              <div class="work-icon"></div>
+              <div class="work-details">
+                <div class="designation">Designation</div>
+                <div class="company-name">Abc Pvt Ltd</div>
+                <div class="work-duration">Month YYYY - Month YYYY</div>
+              </div>
+            </div>
+            <div class="work-description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint
+              doloremque incidunt a consequuntur laudantium quae culpa
+              temporibus veniam numquam dolore et ipsa atque consectetur,
+              veritatis labore necessitatibus at dolorem explicabo provident
+              hic. Repudiandae, assumenda provident quo placeat ex dolorem.
+            </div>
+          </div>
+          <div class="timeline-divider">
+            <div class="timeline-travel-icon">
+              <i class="fas fa-caret-square-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 class="section-heading mb75px">
+          <span>
+            <!--  <i class="fas fa-map-marked-alt"></i> -->
+            <i class="far fa-address-card"></i>
+          </span>
+          <span>Contact</span>
+        </h1>
+
+        <div class="contact-display">
+          <div class="contact-form">
+            <form action="">
+              <!-- <label for="name">Name</label> -->
+              <input type="text" name="my_name" id="name" placeholder="Name" />
+
+              <!-- <label for="email">Email</label> -->
+              <input
+                type="email"
+                name="my_email"
+                id="email"
+                placeholder="Email"
+              />
+
+              <!-- <label for="message">Your Message</label> -->
+              <textarea
+                name="my_message"
+                id="message"
+                placeholder="Your Message"
+              ></textarea>
+
+              <input type="submit" id="send-button" value="Send Message" />
+            </form>
+          </div>
+          <div class="contact-details">
+            <div class="touch-details">
+              <h2>Get in Touch</h2>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+              alias assumenda obcaecati totam animi iusto eum laboriosam nulla
+              blanditiis. Amet odit laboriosam laborum impedit eveniet
+              repellendus illum. Inventore, et quidem.
+            </div>
+            <div class="address-details">
+              <h2>My Address</h2>
+              <div class="address">
+                <i class="fas fa-map-marker-alt"></i> Lorem ipsum dolor sit amet
+                consectetur.
+              </div>
+              <div class="phone">
+                <i class="fas fa-phone-alt"></i> 9999999999
+              </div>
+              <div class="email">
+                <i class="fas fa-envelope-open-text"></i> lorem@gmail.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="contact-links">
+            <div id="social-links2">
+                <ul class="horizontal-list social-list2" type="none">
+                  <li id="leetcode">
+                    <a href="https://www.leetcode.com/rishabhjain1008"
+                      ><img
+                        class=""
+                        src="https://leetcode.com/_next/static/images/logo-ff2b712834cf26bf50a5de58ee27bcef.png"
+                        alt=""
+                    /></a>
+                  </li>
+        
+                  <li id="stackoverflow">
+                    <a href="https://www.stackoverflow.com"
+                      ><i class="fab fa-stack-overflow"></i
+                    ></a>
+                  </li>
+                  <li id="gmail">
+                    <a href="mailto: 7699rishabhjain@gmail.com"
+                      ><i class="fab fa-google"></i
+                    ></a>
+                  </li>
+                  <li id="linkedin">
+                    <a href="https://www.linkedin.com"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li id="quora">
+                    <a href="https://www.quora.com"><i class="fab fa-quora"></i></a>
+                  </li>
+                </ul>
+              </div>
+        </div> -->
+
+        <div class="contact-links">
+          <ul class="" type="none">
+            <li>
+              <a
+                href="https://www.leetcode.com/rishabhjain1008"
+                style="height: 55px; width: 36px"
+                ><img
+                  class=""
+                  src="https://leetcode.com/_next/static/images/logo-ff2b712834cf26bf50a5de58ee27bcef.png"
+                  alt=""
+                  style="height: 100%; width: 100%"
+              /></a>
+            </li>
+
+            <li>
+              <a href="https://www.stackoverflow.com"
+                ><i class="fab fa-stack-overflow"></i
+              ></a>
+            </li>
+            <li>
+              <a href="mailto: 7699rishabhjain@gmail.com"
+                ><i class="fab fa-google"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.quora.com"><i class="fab fa-quora"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- <script src="index.js"></script> -->
+    <script src="index2.js"></script>
+  </body>
+</html>

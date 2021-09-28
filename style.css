@@ -1,0 +1,839 @@
+* {
+  box-sizing: border-box;
+  /* else the padding cross the limit when width =100% then gross > 100% thus come out in frontend or the dev tools */
+}
+body {
+  margin: 0px;
+}
+#body-header {
+  height: auto;
+  background-image: url(static/images/macbook_mouse.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 20vh;
+  opacity: 1;
+  /* ALSO DUE TO THIS THE IMAGE GETS HIDDEN THUS POSITION KA LAFDA DUE TO WHICH I SET WHOLE AS RELATIVE INSTEAD OF JUST #ABOUT-IMG DUE TO WHICH FIXED SE APPEAR HO RHA THA  */
+  /*commented this as then later when #body-navbar gets added yeh uski bhi opacity bigaad rha h*/
+}
+/* NAVBAR CODE */
+
+/* to make it appear but currently disabled open the position line */
+.body-navbar {
+  position: fixed;
+  width: 100%;
+  border: 2px dashed black;
+  background-color: #b80221;
+  color: yellow;
+  top: 0;
+  z-index: 3;
+}
+
+.nav-list-li {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: monospace;
+  margin: 3%;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav-list-li {
+    font-size: 150%;
+    margin: 1%;
+  }
+}
+
+#mobile-navbar {
+  background-color: black;
+  display: none;
+}
+
+@media screen and (max-width: 730px) {
+  #navbar {
+    display: none;
+  }
+  #mobile-navbar {
+    display: block;
+  }
+}
+
+.mbar-hamburger {
+  text-align: right;
+}
+#mbar-icon,
+#close-icon {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+}
+#mbar-list {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height 2s;
+}
+#mbar-list:target {
+  height: 300px;
+}
+.mbar-list-li {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.mbar-list-li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#close-icon{
+  display: none;
+}
+.not-visible {
+  display: none;
+}
+#go-to-top a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 1.5rem;
+}
+
+#go-to-top {
+  padding: 0.5rem;
+}
+
+#nav-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 0;
+  justify-content: center;
+}
+
+.nav-list-li a {
+  transition: color 0.5s;
+  transition: text-decoration 1s;
+  text-decoration: none;
+  color: #f6f6b2;
+}
+.nav-list-li a:hover,
+.nav-list-updated-li a:hover {
+  color: rgb(243, 229, 229);
+  text-decoration: underline;
+}
+
+.nav-list-updated-li {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: monospace;
+  margin: 1%;
+}
+.nav-list-updated-li a {
+  text-decoration: none;
+  color: #f6f6b2;
+  transition: color 0.5s, text-decoration 0.4s;
+}
+#body-header-name {
+  padding-top: 3%;
+  font-family: "Bonheur Royale", cursive;
+  font-size: 5rem;
+  font-weight: 550;
+  display: flex;
+  justify-content: center;
+  /* color: #fff707; */
+  color: white;
+  /* GOOGLE TYPING EFFECT IN WEBSITE HTML,CSS,JS */
+  /* code to make the span sentence and input-cursor aligned START*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#fixed-part {
+  /* min-width: 375px; */
+}
+.input-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 50px;
+  background-color: white;
+  margin-left: 8px;
+}
+/* code to make the span sentence and input-cursor aligned END*/
+
+#fixed-part {
+  font-weight: bold;
+}
+#sentence {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 4rem;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Then, inside .input-cursor: */
+.input-cursor {
+  animation: blink 0.6s linear infinite alternate;
+}
+
+/* HEADER RESPONSIVE */
+@media (max-width: 600px) {
+  html {
+    font-size: 20px;
+  }
+  #body-header-name {
+    font-size: 3rem;
+  }
+  #sentence {
+    font-size: 3rem;
+  }
+}
+
+/* old social list */
+#social-links {
+}
+.social-list {
+  width: 20%;
+  margin: auto;
+  padding-left: 0;
+  padding-top: 1rem;
+}
+.social-image {
+  object-fit: fill;
+  /* background-color: white; */
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.social-list li {
+  display: flex;
+  height: 3rem;
+  width: 2.5rem;
+  align-items: center;
+}
+.social-list a {
+  display: inline-block;
+  height: 90%;
+  width: 100%;
+}
+.social-image {
+  object-fit: fill;
+  /* background-color: white; */
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+/* New social list */
+.horizontal-list {
+  padding-left: 0px;
+  text-align: center;
+  margin-top: 5%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-list2 li {
+  box-sizing: content-box;
+  display: flex;
+  padding: 0px 1rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  height: 4.2rem;
+  width: 2.5rem;
+  align-items: center;
+}
+
+.social-list2 li a {
+  text-decoration: none;
+}
+
+.social-list2 li a i {
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
+}
+#leetcode a {
+  display: inline-block;
+  height: 64%;
+  width: 100%;
+}
+#leetcode a img {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+#linkedin a {
+  color: blue;
+}
+#stackoverflow a {
+  color: orange;
+}
+#gmail a {
+  color: red;
+}
+#quora a {
+  color: red;
+}
+.social-list2 li:hover {
+  box-shadow: 0px 0px 4px 6px rgba(230, 196, 196, 0.3);
+}
+/* MAIN SECTION */
+#main {
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+section:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+section:nth-child(2n + 1) {
+  background-color: white;
+}
+#about {
+  height: auto;
+  justify-content: space-between;
+}
+#about-img {
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 6px grey;
+  margin-bottom: 3rem;
+  border: 2px solid white;
+  margin-top: -10rem;
+}
+#about-img img {
+  border-radius: 100%;
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+}
+
+#about-article {
+  font-family: system-ui;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: dimgrey;
+  text-align: justify;
+  width: 80%;
+}
+.bold-blue {
+  font-weight: bold;
+  color: darkblue;
+}
+
+#skills {
+}
+.section-heading {
+  width: auto;
+  padding: 20px 10px 10px;
+  font-weight: 400;
+  font-family: system-ui;
+}
+.section-heading span {
+  font-size: 40px;
+  color: #2857a4;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+}
+.mb75px {
+}
+
+.skill-progress {
+  border: 1px solid black;
+  width: 200px;
+  margin: 5%;
+  height: auto;
+  background-color: rgb(206, 197, 197);
+  border-radius: 30px;
+}
+.skill-value {
+  box-sizing: border-box;
+  /* bcz without is on increasing padding it becomes 105% which escapes the div */
+  height: 100%;
+  padding: 5% 0 5% 5%;
+  border-radius: 30px 0px 0px 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.skills-display {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* skill progress k andr skill-value have name direct + bg-color on skill-value + percent */
+
+.skill-progress2 {
+  width: 9rem;
+  background-color: lightgrey;
+  border-radius: 0.8rem;
+  margin: 50px;
+}
+
+.skill-progress2 > div {
+  color: white;
+  border-radius: 20px 0 0 20px;
+}
+
+.skill-name span {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+/* end */
+
+.bg-blue {
+  background-color: blue;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-orange {
+  background-color: orange;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-purple {
+  background-color: purple;
+}
+.bg-lightblue {
+  background-color: lightblue;
+}
+.bg-violet {
+  background-color: violet;
+}
+/* PORTFOLIO SECTION */
+#portfolio {
+}
+.portfolio-display {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /*applied line wise even in flex wrap*/
+}
+.portfolio-display > div {
+  box-sizing: content-box;
+  width: 300px;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-display > div {
+    position: relative;
+    width: 350px;
+  }
+
+  .portfolio-display {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 15px;
+  }
+}
+.project-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Images Overlay START */
+.project-text-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #040d0f;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  opacity: 0.7;
+  text-align: justify;
+  box-shadow: -1px 1px 6px 6px lightgrey;
+}
+
+.overlay:hover {
+}
+
+.project-text-img:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+}
+/* IMAGES OVERLAY END */
+
+/* Education Section */
+#education {
+  height: auto;
+}
+
+.timeline {
+  /* border: 2px solid rgb(129, 126, 126); */
+  width: 70%;
+  position: relative;
+  height: auto;
+}
+.timeline-box {
+  /* border: 2px solid black; */
+  position: relative;
+  width: 40%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.work-icon-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.timeline-box:nth-child(2n) .work-icon-details {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.work-details,
+.education-details {
+  display: flex;
+  flex-direction: column;
+}
+/* The nth-child selector counts siblings (i.e., elements having the same parent).Here the work-details is always the first, last and only child of a. So nth-child has only one element to count. */
+/* .work-details:nth-child(2n) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+
+.timeline-box:nth-child(2n + 1) .work-details,
+.timeline-box:nth-child(2n + 1) .education-details {
+  align-items: flex-end;
+}
+.timeline-box:nth-child(2n) .work-details,
+.timeline-box:nth-child(2n) .education-details {
+  align-items: flex-start;
+}
+
+.designation,
+.degree-name {
+  font-weight: bold;
+  color: purple;
+  font-size: 2rem;
+}
+.company-name,
+.college-name {
+  font-size: 1.5rem;
+}
+.work-duration,
+.education-duration {
+  color: rgb(36, 34, 34);
+}
+.work-description {
+  text-align: justify;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: teal;
+}
+.timeline-box:nth-child(2n) {
+  left: 55%;
+}
+.timeline-box:nth-child(2n + 1) {
+  left: 5%;
+}
+
+/* Inserting Icons */
+.timeline-box .work-icon::before {
+  content: "";
+  background-image: url(static/images/stackoverflow_icon.png);
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  background-color: inherit;
+}
+/* .timeline-box:nth-child(2n) .work-icon::before {
+  content: "";
+  background-image: url(static/images/stackoverflow_icon.png);
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+} */
+
+/* adding stops on divider */
+.timeline-box:nth-child(2n + 1)::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: darkblue;
+  display: inline-block;
+  /* position: absolute; as want to set their coordinates and leave normal position use absolute */
+  position: absolute;
+  top: 40%;
+  right: -14.6%;
+  z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: darkblue;
+  display: inline-block;
+  /* position: absolute; as want to set their coordinates and leave normal position use absolute */
+  position: absolute;
+  top: 40%;
+  left: -13.4%;
+  z-index: 1;
+}
+
+.timeline-divider {
+  position: absolute;
+  height: 88%;
+  border: 3px dashed #0096fa6b;
+  top: 3%;
+  left: 50%;
+  margin: auto;
+  width: 0;
+}
+.timeline-travel-icon {
+  font-size: 260%;
+  position: sticky;
+  top: 72%;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+#experience {
+  height: auto;
+}
+/* contact section */
+#contact {
+  height: auto;
+  background: linear-gradient(to top right, blue, purple);
+  justify-content: space-around;
+}
+.touch-details {
+  text-align: justify;
+}
+#contact h1 span {
+  color: white;
+}
+.contact-display {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-form {
+  height: auto;
+  width: 40%;
+  margin-top: 4rem;
+  box-sizing: border-box;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  align-items: center;
+}
+.contact-form input {
+  box-sizing: border-box;
+  outline: none;
+  border: hidden;
+  /* background: linear-gradient(to top right, blue, purple); */
+  background: inherit;
+}
+
+#name,
+#email {
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  padding: 1rem 1rem 0.5rem;
+  color: wheat;
+  border-bottom: 1.5px solid white;
+  width: 100%;
+}
+
+#message {
+  margin-top: 2rem;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: inherit;
+  border-bottom: 1.5px solid white;
+
+  font-size: 1.2rem;
+  padding: 1rem 1rem 0.5rem;
+  color: wheat;
+  width: 100%;
+  min-width: 30%;
+  max-width: 100%;
+  min-height: 30%;
+  max-height: 40%;
+}
+
+#send-button {
+  outline: none;
+  border: hidden;
+  background: inherit;
+  margin-top: 2rem;
+  color: white;
+  font-size: 1rem;
+  border: 2px solid white;
+  padding: 0.5rem;
+}
+
+.contact-details {
+  margin-top: 2rem;
+  height: auto;
+  width: 600px;
+  background: inherit;
+  color: white;
+  /* word-spacing: 1px;*/
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.address-details > div {
+  margin: 1rem 0;
+}
+.contact-links {
+  margin-top: 10vh;
+  width: 70%;
+}
+.contact-links i {
+  color: rgb(255 161 22);
+}
+
+.contact-links ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+  font-size: 3rem;
+  padding: 0;
+}
+
+/* contact width decrease so that social links at middle as display fle wrap brings in separate line 2 divs whereas social-links at center acc tot he whole width which is wrong. */
+@media screen and (max-width: 1335px) {
+  .contact-display {
+    width: 60%;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 10%;
+  }
+}
+
+/* hamburger navbar */
+@media screen and (max-width: 1150px) {
+}
+
+/* responsive experience section */
+@media screen and (max-width: 800px) {
+  .timeline-divider {
+    left: 8%;
+  }
+  .timeline-box {
+    width: 80%;
+    margin: 0;
+    position: relative;
+    left: 14% !important;
+    margin-top: 10%;
+  }
+
+  .timeline-box:nth-child(2n + 1)::after {
+    left: -8.8%;
+  }
+
+  .timeline-box:nth-child(2n)::after {
+    left: -8.8%;
+  }
+
+  .work-icon-details {
+    flex-direction: row-reverse;
+  }
+
+  .education-details,
+  .work-details {
+    align-items: flex-start !important;
+  }
+}
+
+.contact-links ul li {
+  display: flex;
+  align-items: center;
+  border-radius: 20%;
+  margin: 5%;
+}
+.contact-links ul li:hover {
+  /* box-shadow: 0px 0px 10px 10px rgb(206 197 197); */
+}
+.seventy-percent {
+  width: 70%;
+}
+.sixty-percent {
+  width: 60%;
+}
+.fifty-percent {
+  width: 50%;
+}
+.ninety-percent {
+  width: 90%;
+}
+.forty-percent {
+  width: 40%;
+}
+.thirty-percent {
+  width: 30%;
+}
