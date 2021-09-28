@@ -52,7 +52,7 @@ carousel(carouselText, "#sentence");
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-    if (scroll >= 0.4 * $(window).height()) {
+    if (scroll >= 0.7 * $(window).height()) {
         $("#go-to-top").addClass('body-navbar');
         $("#go-to-top").removeClass('not-visible');
     } else {
